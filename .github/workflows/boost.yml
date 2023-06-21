@@ -29,6 +29,8 @@ jobs:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: boostsecurityio/boostsec-scanner-composition
           api_endpoint: https://api.dev.boostsec.io
+          log_level: DEBUG
+          additional_args: --registry https://github.com/boostsecurityio/scanner-testing.git
       - name: PII Scan
         uses: boostsecurityio/boostsec-scanner-github@v4.0.2
         with:
